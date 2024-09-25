@@ -26,7 +26,7 @@ namespace detail {
 } // namespace detail
 
 [[REMEMBER_CO_AWAIT]]
-static inline auto fadvise(int fd, int mode, __u64 offset, __u64 len) {
+static inline auto fallocate(int fd, int mode, __u64 offset, __u64 len) {
     return detail::FAllocate{fd, mode, offset, len};
 }
 
